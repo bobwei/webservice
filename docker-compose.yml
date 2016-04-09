@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  redis:
+    build: ./redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redisdb:/data
+
+volumes:
+  redisdb:
+    driver: local
