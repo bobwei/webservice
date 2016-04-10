@@ -7,7 +7,16 @@ services:
       - "6379:6379"
     volumes:
       - redisdb:/data
+  jenkins:
+    image: jenkins
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    volumes:
+      - jenkinsdb:/var/jenkins_home
 
 volumes:
   redisdb:
+    driver: local
+  jenkinsdb:
     driver: local

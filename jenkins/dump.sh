@@ -1,8 +1,8 @@
 #!/bin/bash
 
-VOLUME_NAME=${PWD##*/}_redisdb
-BACKUP_PATH=$(pwd)/redis/data
-DATA_PATH=/data
+VOLUME_NAME=${PWD##*/}_jenkinsdb
+BACKUP_PATH=$(pwd)/jenkins/data
+DATA_PATH=/var/jenkins_home
 TMP_BACKUP_PATH=/backup
 
 docker run --rm -it \
